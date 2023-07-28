@@ -42,12 +42,14 @@ public class DesafioMercado {
 
         for(int i = 0; i < lista.length; i++){
 
-            if(lista[i].equals(produto)){
+            if(lista[i] != null && lista[i].equals(produto)){
 
                 lista[i] = null;
                 fraseDeRetorno = "O item foi deletado com sucesso";
                 break;
 
+            }else{
+                fraseDeRetorno = "Produto não listado";
             }
         }
 
@@ -61,12 +63,14 @@ public class DesafioMercado {
         String fraseDeRetorno = "";
         for(int i = 0; i < lista.length; i++){
 
-            if(lista[i].equals(produtoAnt)){
+            if(lista[i] != null && lista[i].equals(produtoAnt)){
 
                 lista[i] = produtoNov;
                 fraseDeRetorno = "Produto alterado com sucesso";
                 break;
 
+            }else{
+                fraseDeRetorno = "Produto não encontrado";
             }
 
         }
